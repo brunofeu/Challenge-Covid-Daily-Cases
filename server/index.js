@@ -1,20 +1,12 @@
-const path = require('path');
-const express = require("express");
+const express = require('express');
+
+const app = express();
+app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
 
-const app = express();
-
-app.use(express.static(path.resolve(__dirname, '../client/build')));
-
-app.get('/api', (_req, res) => {
-  res.json({message: 'Hello from server'})
-})
-
-app.get('*', (_req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+app.get('/', (_req, res) => {
+  res.status(200).json({message: 'Fullstack Challenge 2021 🏅 - Covid Daily Cases'});
 });
 
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
-});
+app.listen(PORT, () => console.log(`ouvindo porta ${PORT}!`));
