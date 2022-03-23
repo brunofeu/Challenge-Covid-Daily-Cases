@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const mysql = require('mysql');
 
+const casesController = require('./controllers/casesController');
+
 // const { JAWSDB_URL } = process.env;
 
 // const connection = mysql.createConnection(JAWSDB_URL);
@@ -24,16 +26,16 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-app.get('/test', (_req, res) => {
-  test
-  res.status(200).json({message: 'Fullstack Challenge 2022 🏅 - Covid Daily Cases'});
+app.get('/', (_req, res) => {
+  res.status(200).json({ message: 'Fullstack Challenge 2022 🏅 - Covid Daily Cases' });
 });
+
+app.get('/cases/:date/count', casesController.getAll);
 
 // app.get('*', (_req, res) => {
 //   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 // });
 
-// app.get('/cases/:date/count', (_req, res) => {})
 // app.get('/cases/:date/cumulative', (_req, res) => {})
 // app.get('/dates', (_req, res) => {})
 
