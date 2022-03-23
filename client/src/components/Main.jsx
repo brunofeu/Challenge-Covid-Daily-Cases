@@ -29,7 +29,6 @@ function Main() {
     : (
     <div>
       <ul>
-        { dates.map(({date}) => <option>{date}</option>)}
       </ul>
     </div>
     )
