@@ -5,6 +5,12 @@ const getByDate = async (date) => {
   return cases;
 };
 
+const getCumulativeUntilDate = async (date) => {
+  const cases = await casesModel.getCumulativeUntilDate(date);
+  return cases;
+};
+
 module.exports = {
   getByDate,
+  getCumulativeUntilDate,
 };
