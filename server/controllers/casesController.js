@@ -1,12 +1,11 @@
 const casesService = require('../services/casesService');
 
-const getAll = async (req, res) => {
-  const startDate = '2020-08-17';
-  const endDate = '2021-01-01';
-  const cases = await casesService.getAll(startDate, endDate);
-  res.status(200).json({ cases });
+const getByDate = async (req, res) => {
+  const { date } = req.params;
+  const cases = await casesService.getByDate(date);
+  res.status(200).json(cases);
 };
 
 module.exports = {
-  getAll,
+  getByDate,
 };

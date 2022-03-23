@@ -15,7 +15,7 @@ app.get('/', (_req, res) => {
   res.status(200).json({ message: 'Fullstack Challenge 2022 🏅 - Covid Daily Cases' });
 });
 
-app.get('/cases/:date/count', casesController.getAll);
+app.get('/cases/:date/count', casesController.getByDate);
 
 // app.get('*', (_req, res) => {
 //   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
