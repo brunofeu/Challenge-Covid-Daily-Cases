@@ -1,7 +1,7 @@
 const casesModel = require('../models/casesModel');
 
-const getAll = () => {
-  const cases = casesModel.getAll();
+const getAll = async () => {
+  const cases = await casesModel.getAll();
   return cases;
 };
 

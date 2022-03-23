@@ -1,23 +1,8 @@
 require('dotenv').config({ path: 'server/.env' });
 const express = require('express');
 const path = require('path');
-const mysql = require('mysql');
 
 const casesController = require('./controllers/casesController');
-
-// const { JAWSDB_URL } = process.env;
-
-// const connection = mysql.createConnection(JAWSDB_URL);
-
-// connection.connect();
-
-// connection.query('SELECT * FROM covid_daily_cases LIMIT 5;', function(err, rows, fields) {
-//   if (err) throw err;
-
-//   console.log('The solution is: ', rows);
-// });
-
-// connection.end();
 
 const app = express();
 app.use(express.json());

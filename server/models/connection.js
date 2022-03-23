@@ -1,19 +1,26 @@
-const mysql = require('mysql2');
-const dotenv = require('dotenv');
+const mysql = require('mysql');
+require('dotenv').config({ path: 'server/.env' });
 
-dotenv.config();
+const { JAWSDB_URL } = process.env;
 
-const connection = mysql.createConnection(process.env.JAWSDB_URL);
+// const connection = mysql.createConnection(JAWSDB_URL);
+
 // connection.connect();
 
-
-
-connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
-  if (err) throw err;
-
-  console.log('The solution is: ', rows[0].solution);
-});
-
-module.exports = connection
+// connection.query('SELECT * FROM covid_daily_cases LIMIT 5;', (err, rows) => {
+//   if (err) throw err;
+//   // console.log(rows);
+//   return (rows);
+// });
 
 // connection.end();
+
+const pool = mysql.createPool(JAWSDB_URL);
+
+// connection.query('SELECT * FROM covid_daily_cases LIMIT 5', function (error, results, fields) {
+//   if (error) throw error;
+//   console.log('The solution is: ', results[0].solution);
+// });
+
+module.exports = pool;
+
