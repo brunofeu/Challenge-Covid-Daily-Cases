@@ -1,23 +1,21 @@
+require('dotenv').config({ path: 'server/.env' });
 const express = require('express');
 const path = require('path');
-const dotenv = require('dotenv')
 const mysql = require('mysql');
 
-dotenv.config()
+// const { JAWSDB_URL } = process.env;
 
+// const connection = mysql.createConnection(JAWSDB_URL);
 
-const connection = mysql.createConnection('mysql://o95a4nmci714ah9m:oscncg12hf55adaz@acw2033ndw0at1t7.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/xwgtp3ipgqrphvlk');
+// connection.connect();
 
-connection.connect();
+// connection.query('SELECT * FROM covid_daily_cases LIMIT 5;', function(err, rows, fields) {
+//   if (err) throw err;
 
-connection.query('SELECT * FROM covid_daily_cases LIMIT 100;', function(err, rows, fields) {
-  if (err) throw err;
+//   console.log('The solution is: ', rows);
+// });
 
-  console.log('The solution is: ', rows);
-});
-
-connection.end();
-
+// connection.end();
 
 const app = express();
 app.use(express.json());
@@ -25,7 +23,6 @@ app.use(express.json());
 const PORT = process.env.PORT || 3001;
 
 app.use(express.static(path.resolve(__dirname, '../client/build')));
-
 
 app.get('/test', (_req, res) => {
   test
