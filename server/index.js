@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 
 const casesController = require('./controllers/casesController');
+const datesController = require('./controllers/datesController');
 
 const app = express();
 app.use(express.json());
@@ -18,6 +19,8 @@ app.get('/', (_req, res) => {
 app.get('/cases/:date/count', casesController.getByDate);
 
 app.get('/cases/:date/cumulative', casesController.getCumulativeUntilDate);
+
+app.get('/dates', datesController.getAll);
 
 // app.get('*', (_req, res) => {
 //   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
