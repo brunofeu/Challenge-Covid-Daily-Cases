@@ -1,21 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
 
 function App() {
   const [data, setData] = React.useState(null);
+  
 
   React.useEffect(() => {
-    fetch("/dates")
+    fetch('/dates')
       .then((res) => res.json())
-      .then((data) => setData(data.message));
+      .then((data) => setData(data));
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
+    <div>
+     <Header/>
     </div>
   );
 }
