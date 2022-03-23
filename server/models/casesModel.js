@@ -1,7 +1,8 @@
 const connection = require('./connection');
 
-const getAll = async () => {
-  const result = await connection.execute('SELECT * FROM covid_daily_cases LIMIT 5');
+const getAll = async (startDate, endDate) => {
+  const query = 'SELECT * FROM covid_daily_cases WHERE date between ? AND ? GROUP BY location';
+  const result = await connection.execute(query, [startDate, endDate]);
   return result;
 };
 
