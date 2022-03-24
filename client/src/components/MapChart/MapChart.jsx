@@ -38,9 +38,8 @@ const MapChart = ({ setTooltipContent }) => {
 
   const filterCountryCases = (CountryName) => {
     const countryCases = cases.filter(({location}) => location === CountryName);
-    console.log(countryCases)
-    const countryData = countryCases.map((country) => country.daily_quantity)
-    return countryData
+    const countryData = countryCases.map((country) => (`${country.variant}: ${country.daily_quantity}`))
+    return (countryCases.length === 0) ? 'Sem dados deste país' : countryData
   }
 
 
