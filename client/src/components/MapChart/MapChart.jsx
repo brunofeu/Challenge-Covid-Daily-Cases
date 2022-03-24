@@ -18,9 +18,9 @@ const MapChart = ({ setTooltipContent }) => {
 
 
   const filterCountryCases = (CountryName) => {
-    const countryCases = cases.filter(({location}) => location === CountryName);
-    const countryData = countryCases.map((country) => (`${country.variant}: ${country.total}`))
-    return (countryCases.length === 0) ? 'Sem dados deste país' : countryData
+    const countryCases = cases.filter(({location}) => CountryName.includes(location));
+    const countryData = countryCases.map((country) => (`- ${country.variant}: ${country.total} <br>`))
+    return (countryCases.length === 0) ? 'Sem dados deste país' : countryData.join('');
   }
 
 
@@ -36,7 +36,7 @@ const MapChart = ({ setTooltipContent }) => {
                   geography={geo}
                   onMouseEnter={() => {
                     const { NAME } = geo.properties;
-                    setTooltipContent(`${NAME} — ${filterCountryCases(NAME)}`);
+                    setTooltipContent(`${NAME}<br><br>${filterCountryCases(NAME)}`);
                   }}
                   onMouseLeave={() => {
                     setTooltipContent("");

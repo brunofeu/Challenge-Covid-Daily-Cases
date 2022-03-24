@@ -17,7 +17,7 @@ function App() {
       <SelectButton />
       <Slider />
       <MapChart setTooltipContent={setContent} />
-      <ReactTooltip>{content}</ReactTooltip>
+      <ReactTooltip html={true} className='custom-tooltip'>{content}</ReactTooltip>
       <Footer />
     </div>
   );
