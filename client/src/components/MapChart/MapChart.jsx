@@ -36,7 +36,7 @@ const MapChart = ({ setTooltipContent }) => {
                   geography={geo}
                   onMouseEnter={() => {
                     const { NAME } = geo.properties;
-                    setTooltipContent(`${NAME}<br><br>${filterCountryCases(NAME)}`);
+                    setTooltipContent(`${NAME.toUpperCase()} <br><br>${filterCountryCases(NAME)}`);
                   }}
                   onMouseLeave={() => {
                     setTooltipContent("");
