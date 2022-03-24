@@ -1,10 +1,11 @@
-import React, { memo, useEffect, useState } from "react";
+import React, { memo, useContext, useEffect, useState } from "react";
 import {
   ZoomableGroup,
   ComposableMap,
   Geographies,
   Geography
 } from "react-simple-maps";
+import CovidContext from "../../context/CovidContext";
 
 import './MapChart.css'
 
@@ -13,17 +14,12 @@ const geoUrl =
 
 const MapChart = ({ setTooltipContent }) => {
 
-  const [cases, setCases] = useState([])
+  const { cases } = useContext(CovidContext)
 
-  useEffect(() => {
-    fetch('/cases/2020-08-17/count')
-      .then((res) => res.json())
-      .then((response) => setCases(response));
-  }, []);
 
   const filterCountryCases = (CountryName) => {
     const countryCases = cases.filter(({location}) => location === CountryName);
-    const countryData = countryCases.map((country) => (`${country.variant}: ${country.daily_quantity}`))
+    const countryData = countryCases.map((country) => (`${country.variant}: ${country.total}`))
     return (countryCases.length === 0) ? 'Sem dados deste país' : countryData
   }
 

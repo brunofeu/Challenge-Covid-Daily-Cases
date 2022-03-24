@@ -1,17 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import CovidContext from '../../context/CovidContext'
 import './Slider.css'
 
 function Slider() {
 
-  const [dates, setDates] = useState([])
-  const [dateSelected, setDateSelected] = useState(0)
-
-  React.useEffect(() => {
-    fetch('/dates')
-      .then((res) => res.json())
-      .then((response) => setDates(response));
-  }, []);
-
+  const { dateSelected, setDateSelected, dates } = useContext(CovidContext)
   const handleChange = (e) => {
     setDateSelected(dates[e.target.value].date)
   }
@@ -29,7 +22,8 @@ function Slider() {
       />
       <datalist id="datalist">
         {dates.map(({date}) => <option key={date} value= {date}/>)}
-        </datalist>
+      </datalist>
+      <span>{dateSelected}</span>
     </div>
   )
 }

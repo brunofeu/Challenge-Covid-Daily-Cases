@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import CovidContext from '../../context/CovidContext';
 
 function SelectButton() {
 
-  const [cumulative, setCumulative] = useState(false)
+  const { setCumulative } = useContext(CovidContext)
 
- 
+  // const [cumulative, setCumulative] = useState(false)
 
   return (
     <div>
       <select name="cumulative" id="cumulative" onChange= { (e) => setCumulative(e.target.value)}>
-        <option value='false'>Por dia</option>
-        <option value='true'>Total até a data</option>
+        <option value='count'>Por dia</option>
+        <option value='cumulative'>Total até a data</option>
       </select>
     </div>
   )
