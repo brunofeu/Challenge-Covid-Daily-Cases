@@ -1,3 +1,6 @@
+* {
+  height: 100vh;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +38,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.map-container {
+  width: 1000px;
 }
