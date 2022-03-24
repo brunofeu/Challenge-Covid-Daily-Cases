@@ -5,10 +5,6 @@ function SelectButton() {
   const [cumulative, setCumulative] = useState(false)
 
  
-  //  const handleChange = (e) => {
-  //   setDateSelected(e.target.value)
-  //   console.log(dateSelected)
-  // }
 
   return (
     <div>
