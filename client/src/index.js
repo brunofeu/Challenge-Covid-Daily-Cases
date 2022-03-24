@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CovidProvider from './context/CovidProvider';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <CovidProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+  </CovidProvider>,
   document.getElementById('root')
 );
 

@@ -21,9 +21,12 @@
   },
   "homepage": "https://github.com/brunofeu/Challenge-Covid-Daily-Cases#readme",
   "dependencies": {
+    "chart.js": "^3.7.1",
+    "chartjs-chart-geo": "^3.7.1",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "react-chartjs-2": "^4.0.1"
   },
   "devDependencies": {
     "eslint": "^8.11.0",
