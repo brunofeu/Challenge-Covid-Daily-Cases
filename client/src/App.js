@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import Main from './components/Main';
-import USPageMap from './components/MapTest';
+import MapChart from './components/MapChart';
 
 
 function App() {
@@ -12,9 +12,7 @@ function App() {
     <div>
       {/* <Header/> */}
       {/* <Main /> */}
-      teste
-      <USPageMap /> 
-      teste
+      <MapChart /> 
     </div>
   );
 }
