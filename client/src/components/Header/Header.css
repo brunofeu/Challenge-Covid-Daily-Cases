@@ -1,3 +1,17 @@
 .header {
-  height: 150px;
+  background-color: #746AD0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: white;
+  justify-content: space-evenly;
+  height: 200px;
+}
+
+.header a {
+  color: black
+}
+.header a:hover {
+  color:chartreuse;
 }

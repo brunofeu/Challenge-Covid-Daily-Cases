@@ -15,10 +15,12 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <SelectButton />
-      <Slider />
-      <MapChart setTooltipContent={setContent} />
-      <ReactTooltip html={true} className='custom-tooltip'>{content}</ReactTooltip>
+      <div className='main-container'>
+        <SelectButton />
+        <Slider />
+        <MapChart setTooltipContent={setContent} />
+        <ReactTooltip html={true} className='custom-tooltip'>{content}</ReactTooltip>
+      </div>
       <Footer />
     </div>
   );

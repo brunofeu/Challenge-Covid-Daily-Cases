@@ -19,7 +19,7 @@ function Slider() {
     <div className="range-container">
       <input
         name="range"
-        className="dates"
+        className="dates-range"
         type="range"
         min="0"
         onChange={handleChange}
