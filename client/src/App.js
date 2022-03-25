@@ -6,6 +6,7 @@ import MapChart from './components/MapChart/MapChart';
 import ReactTooltip from "react-tooltip";
 import Slider from './components/Slider/Slider';
 import SelectButton from './components/SelectButton/SelectButton';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -14,10 +15,12 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <SelectButton />
-      <Slider />
-      <MapChart setTooltipContent={setContent} />
-      <ReactTooltip html={true} className='custom-tooltip'>{content}</ReactTooltip>
+      <div className='main-container'>
+        <SelectButton />
+        <Slider />
+        <MapChart setTooltipContent={setContent} />
+        <ReactTooltip html={true} className='custom-tooltip'>{content}</ReactTooltip>
+      </div>
       <Footer />
     </div>
   );

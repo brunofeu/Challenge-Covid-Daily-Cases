@@ -19,7 +19,7 @@ const MapChart = ({ setTooltipContent }) => {
 
   const filterCountryCases = (CountryName) => {
     const countryCases = cases.filter(({location}) => CountryName.includes(location));
-    const countryData = countryCases.map((country) => (`- ${country.variant}: ${country.total} <br>`))
+    const countryData = countryCases.map((country) => (`- ${country.variant} = ${country.total} <br>`))
     return (countryCases.length === 0) ? 'Sem dados deste país' : countryData.join('');
   }
 
@@ -27,7 +27,7 @@ const MapChart = ({ setTooltipContent }) => {
   return (
     <div className='map-chart'>
       <ComposableMap data-tip="" projectionConfig={{ scale: 150 }}>
-        <ZoomableGroup zoom={1} minZoom={1} maxZoom={1} translateExtent={[[800, 650], [0, 0]]}>
+        <ZoomableGroup zoom={1} minZoom={1} maxZoom={2} translateExtent={[[850, 650], [0, 0]]}>
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map(geo => (

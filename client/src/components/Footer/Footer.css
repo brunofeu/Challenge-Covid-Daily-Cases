@@ -1,0 +1,17 @@
+.footer-container {
+  background-color: azure;
+  margin: auto;
+  text-align: center;
+}
+
+.links-container a {
+  text-decoration: none;
+  color: black;
+  margin: 0 5px;
+}
+
+.links-container a:hover {
+  color: blue;
+}
+
+

@@ -1,6 +1,12 @@
 .range-container {
   width: 40%;
 }
-.dates {
+.dates-range {
   width: 100%;
+  
+}
+
+.position {
+  position: relative;
+  left: -7%;
 }

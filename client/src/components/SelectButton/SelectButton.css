@@ -1,0 +1,17 @@
+.select-button-container {
+  margin: 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: rgb(192, 187, 247);
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#cumulative {
+  margin: 10px;
+  border-radius: 5px;
+  height: 30px;
+  text-align: center;
+  background-color: white;
+}
