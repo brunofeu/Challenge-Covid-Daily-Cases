@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/brunofeu/Challenge-Covid-Daily-Cases#readme",
   "dependencies": {
+    "bootstrap": "^5.1.3",
     "chart.js": "^3.7.1",
     "chartjs-chart-geo": "^3.7.1",
     "dotenv": "^16.0.0",
