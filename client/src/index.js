@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import CovidProvider from './context/CovidProvider';
 
 ReactDOM.render(
@@ -13,5 +12,3 @@ ReactDOM.render(
   </CovidProvider>,
   document.getElementById('root')
 );
-
-reportWebVitals();

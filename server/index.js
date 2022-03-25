@@ -17,15 +17,7 @@ app.get('/', (_req, res) => {
 });
 
 app.get('/cases/:date/count', casesController.getByDate);
-
 app.get('/cases/:date/cumulative', casesController.getCumulativeUntilDate);
-
 app.get('/dates', datesController.getAll);
-
-// app.get('*', (_req, res) => {
-//   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
-// });
-
-// app.get('/dates', (_req, res) => {})
 
 app.listen(PORT, () => console.log(`ouvindo porta ${PORT}!`));
