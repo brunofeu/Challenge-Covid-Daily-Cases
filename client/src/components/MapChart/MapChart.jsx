@@ -19,7 +19,7 @@ const MapChart = ({ setTooltipContent }) => {
 
   const filterCountryCases = (CountryName) => {
     const countryCases = cases.filter(({location}) => CountryName.includes(location));
-    const countryData = countryCases.map((country) => (`- ${country.variant}: ${country.total} <br>`))
+    const countryData = countryCases.map((country) => (`- ${country.variant} = ${country.total} <br>`))
     return (countryCases.length === 0) ? 'Sem dados deste país' : countryData.join('');
   }
 

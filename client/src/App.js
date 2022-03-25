@@ -6,6 +6,7 @@ import MapChart from './components/MapChart/MapChart';
 import ReactTooltip from "react-tooltip";
 import Slider from './components/Slider/Slider';
 import SelectButton from './components/SelectButton/SelectButton';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

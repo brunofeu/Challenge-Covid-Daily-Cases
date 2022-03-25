@@ -4,3 +4,8 @@
 .dates {
   width: 100%;
 }
+
+.position {
+  position: relative;
+  left: -7%;
+}
