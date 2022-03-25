@@ -4,6 +4,8 @@
   "description": "Fullstack Challenge 🏅 2022 - Covid Daily Cases",
   "main": "index.js",
   "scripts": {
+    "build": "react-scripts /client/build",
+    "install": ""
   },
   "repository": {
     "type": "git",
