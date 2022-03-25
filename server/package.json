@@ -1,24 +1,17 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "Fullstack Challenge 🏅 2022 - Covid Daily Cases",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "cd client && npm install && npm run build",
+    "build": "cd ../client && npm install && npm run build",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brunofeu/Challenge-Covid-Daily-Cases.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/brunofeu/Challenge-Covid-Daily-Cases/issues"
-  },
   "homepage": "https://github.com/brunofeu/Challenge-Covid-Daily-Cases#readme",
   "dependencies": {
     "bootstrap": "^5.1.3",

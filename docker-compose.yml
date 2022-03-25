@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  frontend:
+    build: ./client
+    restart: 'always'
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend
+  backend:
+    build: ./server
+    restart: 'always'
+    ports:
+      - 3001:3001
+    environment:
+      - JAWSDB_URL=mysql://o95a4nmci714ah9m:oscncg12hf55adaz@acw2033ndw0at1t7.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/xwgtp3ipgqrphvlk
+  

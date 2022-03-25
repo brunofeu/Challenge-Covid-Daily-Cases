@@ -26,9 +26,10 @@ function CovidProvider({ children }) {
         setDates(response)
         setDateSelected(response[0].date)
       })
-  }, []);
+  });
 
   useEffect(() => {
+    if (!dateSelected) return
     fetch(`/cases/${dateSelected}/${cumulative}`)
       .then((res) => res.json())
       .then((response) => setCases(response));
