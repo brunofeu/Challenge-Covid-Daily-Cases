@@ -4,11 +4,7 @@ const axios = require('axios');
 
 function CovidProvider({ children }) {
 
-  const BASE_URL = 'https://challenge-covid-daily-cases.herokuapp.com'
-
-  const http = axios.create({baseURL: BASE_URL, timeout: 30000})
-
-  
+  const { REACT_APP_BASE_URL } = process.env;
 
   const [cumulative, setCumulative] = useState('count')
   const [dates, setDates] = useState([])
@@ -30,7 +26,7 @@ function CovidProvider({ children }) {
 
     axios({
       method: 'get',
-      url: `${BASE_URL}/dates`,
+      url: `${REACT_APP_BASE_URL}/dates`,
     }).then(({data}) => {
         setDates(data)
         setDateSelected(data[0].date)
@@ -42,7 +38,7 @@ function CovidProvider({ children }) {
 
     axios({
       method: 'get',
-      url: `${BASE_URL}/cases/${dateSelected}/${cumulative}`,
+      url: `${REACT_APP_BASE_URL}/cases/${dateSelected}/${cumulative}`,
     }).then(({data}) => setCases(data));
     
   }, [dateSelected, cumulative]);
