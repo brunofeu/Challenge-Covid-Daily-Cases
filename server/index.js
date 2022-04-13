@@ -1,12 +1,14 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 
 const casesController = require('./controllers/casesController');
 const datesController = require('./controllers/datesController');
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const PORT = process.env.PORT || 3001;
 
