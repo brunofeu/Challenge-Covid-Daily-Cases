@@ -1,11 +1,20 @@
 .select-button-container {
+  display: flex;
   margin: 20px;
   font-size: 20px;
-  border-radius: 20px;
-  background-color: rgb(192, 187, 247);
+  border-radius: 5px;
+  background-color: white;
   padding: 10px;
-  width: 300px;
-  text-align: center;
+  width: 40%;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  filter: drop-shadow(10px 6px 5px rgba(25,25,25,.1));
+  border-top: 6px solid #746AB0;
+}
+
+.select-button-label {
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 #cumulative {
@@ -14,4 +23,5 @@
   height: 30px;
   text-align: center;
   background-color: white;
+  filter: drop-shadow(10px 6px 5px rgba(25,25,25,.1));
 }

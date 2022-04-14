@@ -1,7 +1,12 @@
 .footer-container {
-  background-color: azure;
-  margin: auto;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  align-items: center;
+  width: 100vw;
+  background-image: linear-gradient(rgb(249, 251, 250), rgb(180, 220, 232));
+  /* background-image: url(../../assets/imageedit_1_3799221208.png); */
+  /* background-repeat: no-repeat; */
 }
 
 .links-container a {

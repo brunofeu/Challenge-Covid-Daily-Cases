@@ -8,7 +8,7 @@ ReactDOM.render(
   <CovidProvider>
     <React.StrictMode>
       <App />
-    </React.StrictMode>,
+    </React.StrictMode>
   </CovidProvider>,
   document.getElementById('root')
 );

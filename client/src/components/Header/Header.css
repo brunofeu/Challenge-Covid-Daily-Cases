@@ -1,17 +1,29 @@
 .header {
-  background-color: #746AD0;
+  background-image: url(../../assets/imageedit_1_3799221208.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 130px;
+}
+
+.header-text {
   display: flex;
   flex-direction: column;
+  width: 40%;
   align-items: center;
-  width: 100%;
+  padding: 10px;
   color: white;
-  justify-content: space-evenly;
-  height: 150px;
+  filter: drop-shadow(10px 6px 5px rgba(25,25,25,.9))
+}
+
+.header-text p {
+  filter: drop-shadow(1px 2px 3px rgba(25,25,25,.1))
+  
 }
 
 .header a {
-  color: black
+  color: black;
 }
+
 .header a:hover {
   color:chartreuse;
 }

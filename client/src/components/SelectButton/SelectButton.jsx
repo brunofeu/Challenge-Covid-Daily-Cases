@@ -10,7 +10,7 @@ function SelectButton() {
 
   return (
     <div className="select-button-container">
-      <label htmlFor="cumulative">Ver números de casos:  </label>
+      <label className="select-button-label" htmlFor="cumulative">Ver números de casos:  </label>
       <select name="cumulative" id="cumulative" onChange= { (e) => setCumulative(e.target.value)}>
         <option value='count'>Por dia</option>
         <option value='cumulative'>Total até a data</option>
