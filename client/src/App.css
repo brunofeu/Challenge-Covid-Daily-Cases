@@ -1,6 +1,9 @@
 .custom-tooltip {
-  width: 150px !important;
-  line-height: 15px !important;
+  width: 300px !important;
+  background-color: white !important;
+  /* line-height: 15px !important; */
+  color: black !important;
+  text-align: center !important;
 }
 
 .main-container {
