@@ -10,6 +10,7 @@ function CovidProvider({ children }) {
   const [dates, setDates] = useState([])
   const [dateSelected, setDateSelected] = useState(0)
   const [cases, setCases] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
 
   const contextValue = {
     cumulative,
@@ -19,10 +20,13 @@ function CovidProvider({ children }) {
     dateSelected,
     setDateSelected,
     cases,
-    setCases
+    setCases,
+    isLoading,
+    setIsLoading
   }
 
   useEffect(() => {
+    setIsLoading(true);
 
     axios({
       method: 'get',
@@ -30,16 +34,18 @@ function CovidProvider({ children }) {
     }).then(({data}) => {
         setDates(data)
         setDateSelected(data[0].date)
-      });
+      }).then(() => setIsLoading(false));
 
   }, []);
 
   useEffect(() => {
+    setIsLoading(true);
 
     axios({
       method: 'get',
       url: `${REACT_APP_BASE_URL}/cases/${dateSelected}/${cumulative}`,
-    }).then(({data}) => setCases(data));
+    }).then(({data}) => setCases(data))
+    .then(() => setIsLoading(false));
     
   }, [dateSelected, cumulative]);
 

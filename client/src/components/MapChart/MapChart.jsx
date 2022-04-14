@@ -8,13 +8,16 @@ import {
 import CovidContext from "../../context/CovidContext";
 
 import './MapChart.css'
+import logo from '../../assets/loading.gif' 
+
+
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
 const MapChart = ({ setTooltipContent }) => {
 
-  const { cases } = useContext(CovidContext)
+  const { cases, isLoading } = useContext(CovidContext)
 
 
   const filterCountryCases = (CountryName) => {
@@ -42,6 +45,7 @@ const MapChart = ({ setTooltipContent }) => {
 
   return (
     <div className='map-chart'>
+      {isLoading && <img className="loading" src={logo} alt="loading..." />}
       <ComposableMap data-tip="" projectionConfig={{ scale: 150 }}>
         <ZoomableGroup zoom={1} minZoom={1} maxZoom={2} translateExtent={[[850, 650], [0, 0]]}>
           <Geographies geography={geoUrl}>
