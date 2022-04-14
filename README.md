@@ -4,14 +4,15 @@ Fullstack Challenge 🏅 2022 - Covid Daily Cases
 
 Neste desafio foi desenvolvido uma REST API que utiliza o histórico de casos de Covid de um banco de dados e permite visualizar as informações no frontend em um mapa, que ao passar o mouse por cima dos países, mostra a quantidade de casos por variante.
 
+#### Demo: https://challenge-covid-cases.vercel.app/
 
 ## Técnologias usadas
 
 Front-end:
-> Desenvolvido usando: React, Context, CSS3, HTML5, Bootstrap
+> Desenvolvido usando: React, Context, CSS3, HTML5, Bootstrap, Vercel
 
 Back-end:
-> Desenvolvido usando: NodeJS, ExpressJS, MYSQL
+> Desenvolvido usando: NodeJS, ExpressJS, MYSQL, Heroku
 
 ## Instalando Dependências
 
